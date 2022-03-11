@@ -1,4 +1,4 @@
-module simplecert
+module simplecert-momento
 
 go 1.17
 
