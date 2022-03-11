@@ -16,7 +16,6 @@ import (
 	"github.com/go-acme/lego/v4/challenge/dns01"
 	"github.com/go-acme/lego/v4/challenge/tlsalpn01"
 
-	"github.com/go-acme/lego/v4/certcrypto"
 	"github.com/go-acme/lego/v4/challenge/http01"
 	"github.com/go-acme/lego/v4/lego"
 	"github.com/go-acme/lego/v4/providers/dns"
@@ -32,7 +31,7 @@ func createClient(u SSLUser, dnsServers []string) (lego.Client, error) {
 	// create lego config
 	config := lego.NewConfig(&u)
 	config.CADirURL = c.DirectoryURL
-	config.Certificate.KeyType = certcrypto.RSA4096
+	config.Certificate.KeyType = c.KeyType
 
 	// Create a new client instance
 	client, err := lego.NewClient(config)

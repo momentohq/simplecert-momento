@@ -10,6 +10,7 @@ package simplecert
 
 import (
 	"errors"
+	"github.com/go-acme/lego/v4/certcrypto"
 	"log"
 	"os"
 	"time"
@@ -45,6 +46,7 @@ var Default = &Config{
 	DNSProvider:   "",
 	Local:         false,
 	UpdateHosts:   true,
+	KeyType:       certcrypto.RSA4096,
 	DNSServers:    []string{},
 }
 
@@ -91,6 +93,9 @@ type Config struct {
 
 	// UpdateHosts adds the domains to /etc/hosts if running in local mode
 	UpdateHosts bool
+
+	// Key
+	KeyType certcrypto.KeyType
 
 	// Handler funcs for graceful service shutdown and restoring
 	WillRenewCertificate     func()
