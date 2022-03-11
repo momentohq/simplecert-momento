@@ -1,4 +1,4 @@
-module simplecert-momento
+module github.com/momentohq/simplecert-momento
 
 go 1.17
 

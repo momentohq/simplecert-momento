@@ -1,3 +1,12 @@
+# MOMENTO FORK OF SIMPLECERT
+
+This is a fork of https://github.com/foomo/simplecert .
+It carries a patch that allows you to configure the
+size of the key for the certificates.  Hopefully this
+is just temporary, would like to contribute the
+patch back upstream and then get rid of this fork.
+
+
          _                 _                    _
      ___(_)_ __ ___  _ __ | | ___  ___ ___ _ __| |_
     / __| | '_ ` _ \| '_ \| |/ _ \/ __/ _ \ '__| __|
